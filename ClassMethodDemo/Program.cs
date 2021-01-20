@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ClassMethodDemo
 {
@@ -36,15 +37,19 @@ namespace ClassMethodDemo
             customer5.age = 18;
             customer5.ID = "15498567452";
 
-            Customer[] customers = new Customer[] { customer1, customer3, customer5 };
+
+            List<Customer> customers = new List<Customer>();
+            //Customer[] customers = new Customer[] { customer1, customer3, customer5 };
 
             CustomerManager customerManager = new CustomerManager();
             customerManager.Add(customer1);
             customerManager.Add(customer3);
             customerManager.Add(customer5);
-            customerManager.Delete(customer4);
             customerManager.Delete(customer2);
-            customerManager.Listele(customers);
+            customerManager.Delete(customer3);
+            customerManager.Add(customer4);
+            customerManager.Listele();
+            
         }
     }
 }
