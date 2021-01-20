@@ -30,11 +30,18 @@ namespace ClassMethodDemo
             customer4.age = 94;
             customer4.ID = "15798564571";
 
-            Customer[] customers = new Customer[] { customer1, customer3 };
+            Customer customer5 = new Customer();
+            customer5.name = "Burxu";
+            customer5.surname = "Slefusz";
+            customer5.age = 18;
+            customer5.ID = "15498567452";
+
+            Customer[] customers = new Customer[] { customer1, customer3, customer5 };
 
             CustomerManager customerManager = new CustomerManager();
             customerManager.Add(customer1);
             customerManager.Add(customer3);
+            customerManager.Add(customer5);
             customerManager.Delete(customer4);
             customerManager.Delete(customer2);
             customerManager.Listele(customers);
